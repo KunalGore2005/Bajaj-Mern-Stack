@@ -13,7 +13,7 @@ const ticketService = {
     }
     
     const response = await axios.get(`${API_URL}/tickets`, { params });
-    return response.data;
+    return response.data.data;
   },
 
   createTicket: async (ticketData) => {
@@ -33,7 +33,14 @@ const ticketService = {
 
   getStats: async () => {
     const response = await axios.get(`${API_URL}/tickets/stats`);
-    return response.data;
+    const backendStats = response.data.data;
+    return {
+      open: backendStats.statusCounts.open || 0,
+      in_progress: backendStats.statusCounts.in_progress || 0,
+      resolved: backendStats.statusCounts.resolved || 0,
+      closed: backendStats.statusCounts.closed || 0,
+      breached: backendStats.breachedOpenTickets || 0,
+    };
   }
 };
 
