@@ -149,11 +149,11 @@ function App() {
       <header className="bg-slate-900 text-white shadow-md border-b border-slate-800 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-tr from-indigo-500 to-purple-600 p-2 rounded-xl text-white shadow-md shadow-indigo-500/20">
+            <div className="bg-linear-to-tr from-indigo-500 to-purple-600 p-2 rounded-xl text-white shadow-md shadow-indigo-500/20">
               <BiSupport className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent m-0 leading-none">
+              <h1 className="text-xl font-extrabold tracking-tight bg-linear-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent m-0 leading-none">
                 DeskFlow
               </h1>
               <p className="text-[10px] text-slate-400 font-semibold tracking-wider uppercase mt-0.5">
@@ -183,7 +183,7 @@ function App() {
             <CreateTicketForm onSubmit={handleCreateTicket} loading={actionLoading} />
             
             {/* Context Stats / Info box */}
-            <div className="bg-gradient-to-br from-indigo-900 to-slate-900 text-white p-5 rounded-2xl border border-slate-800 shadow-md">
+            <div className="bg-linear-to-br from-indigo-900 to-slate-900 text-white p-5 rounded-2xl border border-slate-800 shadow-md">
               <div className="flex items-center gap-2 mb-2">
                 <BiTrendingUp className="h-5 w-5 text-indigo-400" />
                 <h3 className="font-bold text-sm tracking-wide uppercase">Operational Overview</h3>
